@@ -77,11 +77,11 @@ namespace SquareCalculator.Figures.Primitives
         {
             var semiPerimeter = (FirstSide + SecondSide + ThirdSide) / 2;
 
-            var firstSideCoeficient = semiPerimeter - FirstSide;
-            var secondSideCoeficient = semiPerimeter - SecondSide;
-            var thirdSideCoeficient = semiPerimeter - ThirdSide;
+            var firstSideCoefficient = semiPerimeter - FirstSide;
+            var secondSideCoefficient = semiPerimeter - SecondSide;
+            var thirdSideCoefficient = semiPerimeter - ThirdSide;
 
-            return Math.Sqrt(semiPerimeter * firstSideCoeficient * secondSideCoeficient * thirdSideCoeficient);
+            return Math.Sqrt(semiPerimeter * firstSideCoefficient * secondSideCoefficient * thirdSideCoefficient);
         }
         
         #endregion
