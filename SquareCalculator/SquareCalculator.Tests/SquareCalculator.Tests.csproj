@@ -55,10 +55,6 @@
       <Project>{8b834ee7-ec33-4532-b1d9-21dabfe19771}</Project>
       <Name>SquareCalculator.Figures</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SquareCalculator\SquareCalculator.csproj">
-      <Project>{86b38371-4e34-42e2-8dac-14121893db0a}</Project>
-      <Name>SquareCalculator</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
