@@ -38,8 +38,18 @@ namespace SquareCalculator.Figures.Primitives
 
         #endregion
 
+        /// <summary>
+        /// Треугольник
+        /// </summary>
+        /// <param name="firstSide">Первая сторона</param>
+        /// <param name="secondSide">Вторая сторона</param>
+        /// <param name="thirdSide">Третья сторона</param>
+        /// <exception cref="ArgumentOutOfRangeException">Если сторона треугольника имеет отрицательное значение</exception>
         public Triangle(double firstSide, double secondSide, double thirdSide)
         {
+            if (firstSide < 0 || secondSide < 0 || thirdSide < 0)
+                throw new ArgumentOutOfRangeException("Сторона не может быть отрицательной");
+
             FirstSide = firstSide;
             SecondSide = secondSide;
             ThirdSide = thirdSide;

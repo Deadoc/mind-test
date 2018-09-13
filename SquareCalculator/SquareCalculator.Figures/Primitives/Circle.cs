@@ -11,14 +11,22 @@ namespace SquareCalculator.Figures.Primitives
         #region Properties
 
         /// <summary>
-        /// Радиус окружности
+        /// Радиус круга
         /// </summary>
         public double Radius { get; }
 
         #endregion
 
+        /// <summary>
+        /// Круг
+        /// </summary>
+        /// <param name="radius">Радиус круга</param>
+        /// <exception cref="ArgumentOutOfRangeException">Если радиус круга имеет отрицательное значение</exception>
         public Circle(double radius)
         {
+            if(radius < 0)
+                throw new ArgumentOutOfRangeException("Радиус не может быть отрицательным");
+
             Radius = radius;
         }
 

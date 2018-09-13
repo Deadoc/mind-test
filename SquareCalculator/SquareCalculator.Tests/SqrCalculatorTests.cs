@@ -12,6 +12,27 @@ namespace SquareCalculator.Tests
     public class SqrCalculatorTests
     {
         /// <summary>
+        /// Тестируем отрицательный радиус круга
+        /// </summary>
+        [Test]
+        public void CircleNegativeRadiusTest()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new Circle(-10));
+        }
+
+        /// <summary>
+        /// Тестируем отрицательные стороны треугольника
+        /// </summary>
+        [Test]
+        public void TriangleNegativeSidesTest()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new Triangle(-10, 0, 0));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new Triangle(0, -10, 0));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new Triangle(0, 0, -10));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new Triangle(-10, -10, -10));
+        }
+
+        /// <summary>
         /// Тестируем вычисление площади круга
         /// </summary>
         [Test]
